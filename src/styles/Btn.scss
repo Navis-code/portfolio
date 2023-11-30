@@ -5,4 +5,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 15px;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    border: none;
+    font-size: 20px;
+
+    transition: transform 0.8s ease;
+  }
+  &:hover {
+    @media screen and (min-width: 768px) {
+      transform: scale(1.5);
+      text-shadow: 0 0 5px lime;
+    }
+  }
 }
