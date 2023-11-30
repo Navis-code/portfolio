@@ -1,0 +1,24 @@
+.menu {
+  width: 77%;
+  text-align: end;
+
+  &__nav {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  &__link {
+    color: white;
+  }
+}
+
+// Estilos de iconos
+ion-icon {
+  color: white;
+  padding: 10px;
+}
