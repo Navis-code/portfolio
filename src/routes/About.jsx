@@ -1,10 +1,12 @@
+import Menu from "./Menu";
+
 function About() {
-    return (
-      <>
-        <h1>ABOUT</h1>
-      </>
-    );
-  }
-  
-  export default About;
-  
+  return (
+    <>
+      <Menu />
+      <h1>ABOUT</h1>
+    </>
+  );
+}
+
+export default About;
