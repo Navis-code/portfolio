@@ -1,4 +1,4 @@
-@use "./variables.scss";
+@use './variables.scss';
 
 .menu {
   width: 77%;
@@ -50,12 +50,8 @@
 }
 
 // Estilos de icono
-ion-icon {
-  color: white;
-  font-size: 30px;
-  padding: 10px;
-  cursor: pointer;
-
+.hamburger-react {
+  margin-left: auto;
   @media screen and (min-width: 768px) {
     display: none;
   }

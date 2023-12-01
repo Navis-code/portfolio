@@ -1,35 +1,33 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "../styles/Menu.scss";
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import '../styles/Menu.scss';
+import Hamburger from 'hamburger-react';
 
 function Menu() {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  const [isOpenMenu, setOpenMenu] = useState(false);
 
   return (
     <div className="menu">
-      <ion-icon
-        name="menu-outline"
-        className={`${showMenu ? "open-menu" : ""}`}
-        onClick={toggleMenu}
-      ></ion-icon>
-      <nav className={`menu__nav ${showMenu ? "show" : ""}`}>
-        <ul className={`menu__list ${showMenu ? "vertical" : ""}`}>
+      <Hamburger
+        className="burguer-menu"
+        toggled={isOpenMenu}
+        toggle={setOpenMenu}
+        color="#fff"
+      />
+      <nav className={`menu__nav ${isOpenMenu ? 'show' : ''}`}>
+        <ul className={`menu__list ${isOpenMenu ? 'vertical' : ''}`}>
           <li className="menu__item">
-            <NavLink className={"menu__link"} to={"/"}>
+            <NavLink className={'menu__link'} to={'/'}>
               Home
             </NavLink>
           </li>
           <li className="menu__item">
-            <NavLink className={"menu__link"} to={"/about"}>
+            <NavLink className={'menu__link'} to={'/about'}>
               About Me
             </NavLink>
           </li>
           <li className="menu__item">
-            <NavLink className={"menu__link"} to={"/portfolio"}>
+            <NavLink className={'menu__link'} to={'/portfolio'}>
               Portfolio
             </NavLink>
           </li>
